@@ -6,13 +6,6 @@
       <h3>A simple vue.js todo web app</h3>
     </center>
     <!-- <br> -->
-    <el-row type="flex" justify="center">
-      <el-col :span="12" :offset="14">
-        <el-tooltip content="Click to Add Task" placement="top">
-         <el-button type="success" icon="plus" class="fab" @click="dialogVisible = true" native-type="button"></el-button>  
-        </el-tooltip>
-      </el-col>
-    </el-row>
 
     <el-dialog :visible.sync="dialogVisible" size="tiny" :close-on-press-escape="false" :show-close="false" :close-on-click-modal="false">
       <span slot="title">
@@ -104,6 +97,9 @@
         </el-tabs>
       </el-col>
     </el-row>
+    <el-tooltip content="Click to Add Task" placement="top">
+      <el-button type="success" icon="plus" class="fab" @click="dialogVisible = true" native-type="button"></el-button>  
+    </el-tooltip>
   </div>
 </template>
 
